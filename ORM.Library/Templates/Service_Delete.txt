@@ -1,0 +1,10 @@
+﻿		public static void Delete({primaryKeyColumn.ClrNativeDataTypeName} {primaryKeyColumn.CamelCaseClrName})
+		{
+			using(SqlCommand sqlCommand = new SqlCommand("delete [{SqlEntitySchema}].[{sqlTable.SqlName}] where [{primaryKeyColumn.SqlName}]=@{primaryKeyColumn.SqlName};"))
+			{
+				sqlCommand.Parameters.AddWithValue("@{primaryKeyColumn.SqlName}", {primaryKeyColumn.CamelCaseClrName});
+				
+				{Settings.Instance.CommandsClassName}.ExecuteNonQuery(sqlCommand);
+			}	
+		}
+

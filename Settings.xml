@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings>
+	<connectionstring name="main" value="Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=YourDiveClub;Data Source=localhost\sqlexpress;"/>
+
+	<output>
+		<commandsclasspathandfilename value="C:\Projects\Personal\ORM\GeneratedCode\Commands.cs" />
+		<modelsclasspathandfilename value="C:\Projects\Personal\ORM\GeneratedCode\Models.cs" />
+		<servicesclasspathandfilename value="C:\Projects\Personal\ORM\GeneratedCode\Services.cs" />
+	</output>
+
+	<wordfiles>
+		<maindictionaryfilename value="Dictionaries/Dictionary.txt" />
+		<reservedwordsfilename value="Dictionaries/ReservedWords.txt" />
+		<customdictionaryfilename value="Dictionaries/CustomDictionary.txt" />
+	</wordfiles>
+
+	<naming>
+		<namespace value="GeneratedCode" />
+		<modelclassname value="Models" />
+		<commandsclassname value="Commands" />
+		<serviceclasssuffix value="Service" />
+		<modelclasssuffix value="Model" />
+		<viewsclassname value="Views" />
+		<storedproceduresclassname value="StoredProcedures" />
+	</naming>
+
+	<templates>
+		<template type="commandsfile" filename="Templates/Commands_File.txt" />
+		<template type="modelenum" filename="Templates/Model_Enum.txt" />
+		<template type="modelsfile" filename="Templates/Models_File.txt" />
+		<template type="modelproperty" filename="Templates/Model_Property.txt" />
+		<template type="modelstruct" filename="Templates/Model_Struct.txt" />
+		<template type="serviceclass" filename="Templates/Service_Class.txt" />
+		<template type="servicecreate" filename="Templates/Service_Create.txt" />
+		<template type="servicedelete" filename="Templates/Service_Delete.txt" />
+		<template type="servicesfile" filename="Templates/Services_File.txt" />
+		<template type="serviceretrieve" filename="Templates/Service_Retrieve.txt" />
+		<template type="serviceretrieveall" filename="Templates/Service_Retrieve_All.txt" />
+		<template type="serviceupdate" filename="Templates/Service_Update.txt" />
+		<template type="servicepopulatemodel" filename="Templates/Service_Populate_Model.txt" />
+		<template type="servicepopulatemodelproperty" filename="Templates/Service_Populate_Model_Property.txt" />
+		<template type="servicepopulatesqlparam" filename="Templates/Service_Populate_Sql_Param.txt" />
+		<template type="servicestoredprocedure" filename="Templates/Service_StoredProcedure.txt" />
+		<template type="servicestoredprocedurevoid" filename="Templates/Service_StoredProcedure_Void.txt" />
+		<template type="servicestoredproceduresclass" filename="Templates/Service_StoredProcedures_Class.txt" />
+		<template type="servicepopulatesqlstoredProcedureparam" filename="Templates/Service_Populate_Sql_StoredProcedure_Param.txt" />
+		<template type="serviceviewsclass" filename="Templates/Service_Views_Class.txt" />
+	</templates>
+
+	<entities>		<tables>
+			<table sqlname="Agency" enum="False"/>
+			<table sqlname="Agency_Contact" enum="False"/>
+			<table sqlname="AgencyGrade" enum="False"/>
+			<table sqlname="AgencyGradeTranslation" enum="False"/>
+			<table sqlname="AgencyTranslation" enum="False"/>
+			<table sqlname="Club" enum="False"/>
+			<table sqlname="Club_Agency" enum="False"/>
+			<table sqlname="Club_Contact" enum="False"/>
+			<table sqlname="ClubTranslation" enum="False"/>
+			<table sqlname="Contact" enum="False"/>
+			<table sqlname="ContactType" enum="False"/>
+			<table sqlname="ContactTypeTranslation" enum="False"/>
+			<table sqlname="Country" enum="False"/>
+			<table sqlname="CountryTranslation" enum="False"/>
+			<table sqlname="Image" enum="False"/>
+			<table sqlname="ImageTranslation" enum="False"/>
+			<table sqlname="Language" enum="False"/>
+			<table sqlname="LanguageTranslation" enum="False"/>
+			<table sqlname="Login" enum="False"/>
+			<table sqlname="Login_Member" enum="False"/>
+			<table sqlname="Login_NonMember" enum="False"/>
+			<table sqlname="Member" enum="False"/>
+			<table sqlname="Member_Agency" enum="False"/>
+			<table sqlname="Member_AgencyGrade" enum="False"/>
+			<table sqlname="Member_Emergency_Contact" enum="False"/>
+			<table sqlname="MembershipType" enum="False"/>
+			<table sqlname="MembershipTypeTranslation" enum="False"/>
+			<table sqlname="MetaDescription" enum="False"/>
+			<table sqlname="MetaDescriptionTranslation" enum="False"/>
+			<table sqlname="MetaTag" enum="False"/>
+			<table sqlname="MetaTagTranslation" enum="False"/>
+			<table sqlname="NonMember" enum="False"/>
+			<table sqlname="Page" enum="False"/>
+			<table sqlname="Page_MetaTag" enum="False"/>
+			<table sqlname="PageType" enum="False"/>
+			<table sqlname="PageTypeTranslation" enum="False"/>
+			<table sqlname="PhoneNumber" enum="False"/>
+			<table sqlname="PhoneNumberType" enum="False"/>
+			<table sqlname="PhoneNumberTypeTranslation" enum="False"/>
+			<table sqlname="RelationshipType" enum="False"/>
+			<table sqlname="RelationshipTypeTranslation" enum="False"/>
+			<table sqlname="SqlColumn" enum="False"/>
+			<table sqlname="SqlColumnTranslation" enum="False"/>
+			<table sqlname="SqlTable" enum="False"/>
+			<table sqlname="StaticPage" enum="False"/>
+			<table sqlname="StaticPageTranslation" enum="False"/>
+			<table sqlname="Url" enum="False"/>
+		</tables>
+		<storedprocedures>
+			<storedprocedure sqlname="FindMissingRelationships"/>
+			<storedprocedure sqlname="FindNonUnicodeColumns"/>
+			<storedprocedure sqlname="FindNullableColumns"/>
+			<storedprocedure sqlname="ListMissingIndexes"/>
+			<storedprocedure sqlname="UpdateSqlTablesAndColumns"/>
+		</storedprocedures>
+		<views>
+			<view sqlname="vwMissingFKeys"/>
+		</views>
+	</entities>
+
+</settings>

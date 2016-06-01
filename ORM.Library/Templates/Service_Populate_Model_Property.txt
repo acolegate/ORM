@@ -1,0 +1,1 @@
+﻿					{column.ClrName} = Convert.To{column.ClrDataType.Name}(dataRow["{column.SqlName}"]),

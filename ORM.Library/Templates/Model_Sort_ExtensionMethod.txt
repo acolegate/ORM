@@ -1,0 +1,14 @@
+﻿		public static void Sort(this List<{sqlEntity.ClrName}> list, {sqlEntity.ClrName}.Column sortColumn, Commands.SortOrder sortOrder = Commands.SortOrder.Ascending)
+		{
+			list.Sort((left, right) =>
+							{
+								switch (sortColumn)
+								{
+{content}									default:
+										{
+											return 0;
+										}
+								}
+							});
+		}
+

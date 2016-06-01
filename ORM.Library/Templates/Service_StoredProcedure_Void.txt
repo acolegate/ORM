@@ -1,0 +1,10 @@
+﻿		public static void {storedProcedure.ClrName}({MakeSprocClrParameters})
+		{
+			using (SqlCommand sqlCommand = new SqlCommand("[{SqlEntitySchema}].[{storedProcedure.SqlName}]"))
+			{
+				sqlCommand.CommandType = CommandType.StoredProcedure;
+{MakePopulateSqlEntityParamValues}				
+				{Settings.Instance.CommandsClassName}.ExecuteNonQuery(sqlCommand);
+			}
+		}
+

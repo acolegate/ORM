@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings>
+	<connectionstring name="main" value="Password=********;Persist Security Info=True;User ID=sa;Initial Catalog=MidHertsDivers;Data Source=..\sqlexpress;"/>
+
+	<output>
+		<commandsclasspathandfilename value="C:\Projects\Personal\ORM\GeneratedCode\Commands.cs" />
+		<modelsclasspathandfilename value="C:\Projects\Personal\ORM\GeneratedCode\Models.cs" />
+		<servicesclasspathandfilename value="C:\Projects\Personal\ORM\GeneratedCode\Services.cs" />
+	</output>
+
+	<wordfiles>
+		<maindictionaryfilename value="Dictionaries/Dictionary.txt" />
+		<reservedwordsfilename value="Dictionaries/ReservedWords.txt" />
+		<customdictionaryfilename value="Dictionaries/CustomDictionary.txt" />
+	</wordfiles>
+
+	<naming>
+		<namespace value="GeneratedCode" />
+		<modelclassname value="Models" />
+		<commandsclassname value="Commands" />
+		<serviceclasssuffix value="Service" />
+		<modelclasssuffix value="Model" />
+		<enumsuffix value="Enum" />
+		<enumprimarykeycolumnsuffixtoremove value="Id" />
+		<viewsclassname value="Views" />
+		<storedproceduresclassname value="StoredProcedures" />
+		<forcepascalcase value="false"/>
+	</naming>
+
+	<templates>
+		<template type="commandsfile" filename="Templates/Commands_File.txt" />
+		<template type="modelenum" filename="Templates/Model_Enum.txt" />
+		<template type="modelsfile" filename="Templates/Models_File.txt" />
+		<template type="modelproperty" filename="Templates/Model_Property.txt" />
+		<template type="modelclass" filename="Templates/Model_Class.txt" />
+		<template type="serviceclass" filename="Templates/Service_Class.txt" />
+		<template type="servicecreate" filename="Templates/Service_Create.txt" />
+		<template type="servicedelete" filename="Templates/Service_Delete.txt" />
+		<template type="servicesfile" filename="Templates/Services_File.txt" />
+		<template type="serviceretrieve" filename="Templates/Service_Retrieve.txt" />
+		<template type="serviceretrieveall" filename="Templates/Service_Retrieve_All.txt" />
+		<template type="serviceupdate" filename="Templates/Service_Update.txt" />
+		<template type="servicepopulatemodel" filename="Templates/Service_Populate_Model.txt" />
+		<template type="servicepopulatemodelproperty" filename="Templates/Service_Populate_Model_Property.txt" />
+		<template type="servicepopulatemodelpropertynullable" filename="Templates/Service_Populate_Model_Property_Nullable.txt" />
+		<template type="servicepopulatemodelpropertyenum" filename="Templates/Service_Populate_Model_Property_Enum.txt" />
+		<template type="servicepopulatesqlparam" filename="Templates/Service_Populate_Sql_Param.txt" />
+		<template type="servicepopulatesqlparamenum" filename="Templates/Service_Populate_Sql_Param_Enum.txt" />
+		<template type="servicestoredprocedure" filename="Templates/Service_StoredProcedure.txt" />
+		<template type="servicestoredprocedurevoid" filename="Templates/Service_StoredProcedure_Void.txt" />
+		<template type="servicestoredproceduresclass" filename="Templates/Service_StoredProcedures_Class.txt" />
+		<template type="servicepopulatesqlstoredProcedureparam" filename="Templates/Service_Populate_Sql_StoredProcedure_Param.txt" />
+		<template type="serviceviewsclass" filename="Templates/Service_Views_Class.txt" />
+		<template type="modelsortextensionmethod" filename="Templates/Model_Sort_ExtensionMethod.txt" />
+	</templates>
+
+	<entities>
+		<tables>
+			<table sqlname="Article" enum="False"/>
+			<table sqlname="CalendarEvent" enum="False"/>
+			<table sqlname="CalendarEventMember" enum="False"/>
+			<table sqlname="CalendarEventType" enum="True"/>
+			<table sqlname="DiverGrade" enum="False"/>
+			<table sqlname="Feed" enum="False"/>
+			<table sqlname="FeedCategory" enum="False"/>
+			<table sqlname="FeedType" enum="True"/>
+			<table sqlname="Gallery" enum="False"/>
+			<table sqlname="GalleryImage" enum="False"/>
+			<table sqlname="KitCategory" enum="False"/>
+			<table sqlname="KitForSale" enum="False"/>
+			<table sqlname="Member" enum="False"/>
+			<table sqlname="SignOff" enum="False"/>
+			<table sqlname="SignOffRecord" enum="False"/>
+			<table sqlname="SignOffType" enum="True"/>
+			<table sqlname="UploadedFile" enum="False"/>
+			<table sqlname="Website" enum="False"/>
+		</tables>
+		<storedprocedures>
+		</storedprocedures>
+		<views>
+		</views>
+	</entities>
+
+</settings>

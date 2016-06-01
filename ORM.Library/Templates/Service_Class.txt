@@ -1,0 +1,7 @@
+﻿	[ExcludeFromCodeCoverage]
+	[DebuggerStepThrough]
+	public static partial class {sqlEntity.ClrName}{Settings.Instance.ServiceClassSuffix}
+	{
+{content}
+	}
+

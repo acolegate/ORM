@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
+
+namespace {Settings.Instance.Namespace}
+{
+	#region ORM generated code
+
+	[ExcludeFromCodeCoverage]
+	[DebuggerStepThrough]
+	public static partial class {Settings.Instance.ModelClassName}
+	{
+{content}	}
+
+	#endregion
+}

@@ -1,0 +1,9 @@
+﻿		public static void Update({Settings.Instance.ModelClassName}.{sqlEntity.ClrName} {sqlEntity.CamelCaseClrName})
+		{
+			using(SqlCommand sqlCommand = new SqlCommand("update [{SqlEntitySchema}].[{sqlTable.SqlName}] set {MakeSqlSetsFromColumns} where [{primaryKeyColumn.SqlName}]=@{primaryKeyColumn.SqlName};"))
+			{
+{MakePopulateSqlEntityParamValues}
+				{Settings.Instance.CommandsClassName}.ExecuteNonQuery(sqlCommand);
+			}
+		}
+

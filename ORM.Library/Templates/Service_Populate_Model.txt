@@ -1,0 +1,11 @@
+﻿		private static {Settings.Instance.ModelClassName}.{sqlEntity.ClrName} Populate{sqlEntity.ClrName}{Settings.Instance.ModelClassSuffix}(DataRow dataRow)
+		{
+			if(dataRow != null)
+			{
+				return new {Settings.Instance.ModelClassName}.{sqlEntity.ClrName}
+				{
+{MakePopulateModelPropertiesFromSqlValues}				};
+			}
+			return null;
+		}
+

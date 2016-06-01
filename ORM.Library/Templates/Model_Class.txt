@@ -1,0 +1,8 @@
+﻿		public class {sqlEntity.ClrName}
+		{
+			public enum Column
+			{
+{columnenum}			}
+
+{content}		}
+{extensionmethods}

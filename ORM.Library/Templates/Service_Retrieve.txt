@@ -1,0 +1,10 @@
+﻿		public static {Settings.Instance.ModelClassName}.{sqlEntity.ClrName} Retrieve({primaryKeyColumn.ClrNativeDataTypeName} {primaryKeyColumn.CamelCaseClrName})
+		{
+			using(SqlCommand sqlCommand = new SqlCommand("select {sqlTable.ColumnsAsCsv} from [{SqlEntitySchema}].[{sqlTable.SqlName}] where [{primaryKeyColumn.SqlName}]=@{primaryKeyColumn.SqlName};"))
+			{
+				sqlCommand.Parameters.AddWithValue("@{primaryKeyColumn.SqlName}", {primaryKeyColumn.CamelCaseClrName});
+
+				return Populate{sqlEntity.ClrName}{Settings.Instance.ModelClassSuffix}({Settings.Instance.CommandsClassName}.RetrieveDataRow(sqlCommand));
+			}	
+		}
+

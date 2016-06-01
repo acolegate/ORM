@@ -1,0 +1,1 @@
+﻿			public {sqlTableColumn.ClrNativeDataTypeName} {sqlTableColumn.ClrName} { get; set; }

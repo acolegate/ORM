@@ -1,0 +1,9 @@
+﻿		public static {primaryKeyColumn.ClrNativeDataTypeName} Create({Settings.Instance.ModelClassName}.{sqlEntity.ClrName} {sqlEntity.CamelCaseClrName})
+		{
+			using (SqlCommand sqlCommand = new SqlCommand("insert into [{SqlEntitySchema}].[{sqlTable.SqlName}]({sqlTable.ColumnsAsCsv}) values({sqlTable.ColumnParametersAsCsv}); select scope_identity();"))
+			{
+{MakePopulateSqlEntityParamValues}
+				return Convert.To{primaryKeyColumn.ClrDataType.Name}({Settings.Instance.CommandsClassName}.RetrieveScalarValue(sqlCommand));
+			}	
+		}
+

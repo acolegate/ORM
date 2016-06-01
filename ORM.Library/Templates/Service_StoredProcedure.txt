@@ -1,0 +1,23 @@
+﻿		public static List<{Settings.Instance.ModelClassName}.{storedProcedure.ClrName}> {storedProcedure.ClrName}({MakeSprocClrParameters})
+		{
+			List<{Settings.Instance.ModelClassName}.{storedProcedure.ClrName}> {storedProcedure.CamelCaseClrName}List = new List<{Settings.Instance.ModelClassName}.{storedProcedure.ClrName}>();
+
+			using (SqlCommand sqlCommand = new SqlCommand("[{SqlEntitySchema}].[{storedProcedure.SqlName}]"))
+			{
+				sqlCommand.CommandType = CommandType.StoredProcedure;
+
+{MakePopulateSqlEntityParamValues}				
+				{Settings.Instance.ModelClassName}.{storedProcedure.ClrName} {storedProcedure.CamelCaseClrName};
+				foreach(DataRow dataRow in {Settings.Instance.CommandsClassName}.RetrieveDataTable(sqlCommand).Rows)
+				{
+					{storedProcedure.CamelCaseClrName} = Populate{storedProcedure.ClrName}{Settings.Instance.ModelClassSuffix}(dataRow);
+					if({storedProcedure.CamelCaseClrName} != null)
+					{
+						{storedProcedure.CamelCaseClrName}List.Add(({Settings.Instance.ModelClassName}.{storedProcedure.ClrName}){storedProcedure.CamelCaseClrName});
+					}
+				}
+			}
+
+			return {storedProcedure.CamelCaseClrName}List;
+		}
+

@@ -1,0 +1,7 @@
+﻿	[ExcludeFromCodeCoverage]
+	[DebuggerStepThrough]
+	public static class {Settings.Instance.StoredProceduresClassName}
+	{
+{content}
+	}
+

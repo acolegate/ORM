@@ -1,0 +1,30 @@
+﻿		public static List<{Settings.Instance.ModelClassName}.{sqlEntity.ClrName}> RetrieveAll
+		{
+			get
+			{
+				return RetrieveWhere();
+			}
+		}
+
+		public static List<{Settings.Instance.ModelClassName}.{sqlEntity.ClrName}> RetrieveWhere(string clause = "")
+		{
+			List<{Settings.Instance.ModelClassName}.{sqlEntity.ClrName}> {sqlEntity.CamelCaseClrName}List = new List<{Settings.Instance.ModelClassName}.{sqlEntity.ClrName}>();
+
+			string cleanedUpWhereClause = Commands.CleanupWhereClause(clause);
+
+			using(SqlCommand sqlCommand = new SqlCommand(string.Format("select {sqlTable.ColumnsAsCsv} from [{SqlEntitySchema}].[{sqlTable.SqlName}] {0};", cleanedUpWhereClause)))
+			{
+				{Settings.Instance.ModelClassName}.{sqlEntity.ClrName} {sqlEntity.CamelCaseClrName};
+				foreach(DataRow dataRow in {Settings.Instance.CommandsClassName}.RetrieveDataTable(sqlCommand).Rows)
+				{
+					{sqlEntity.CamelCaseClrName} = Populate{sqlEntity.ClrName}{Settings.Instance.ModelClassSuffix}(dataRow);
+					if({sqlEntity.CamelCaseClrName} != null)
+					{
+						{sqlEntity.CamelCaseClrName}List.Add(({Settings.Instance.ModelClassName}.{sqlEntity.ClrName}){sqlEntity.CamelCaseClrName});
+					}
+				}
+			}	
+
+			return {sqlEntity.CamelCaseClrName}List;
+		}
+

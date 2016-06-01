@@ -1,0 +1,1 @@
+﻿					{column.ClrName} = ({Settings.Instance.ModelClassName}.{enumName})Convert.To{column.ClrDataType.Name}(dataRow["{column.SqlName}"]),

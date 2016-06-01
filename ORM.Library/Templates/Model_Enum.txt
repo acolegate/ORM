@@ -1,0 +1,4 @@
+﻿		public enum {sqlEntity.ClrName}{Settings.Instance.EnumSuffix}
+		{
+{content}		}
+
